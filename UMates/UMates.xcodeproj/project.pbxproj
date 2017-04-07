@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37CD63861E9706B300365184 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CD63851E9706B300365184 /* ProfileTableViewCell.swift */; };
+		37CD63881E970D4100365184 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 37CD63871E970D4100365184 /* img */; };
+		37CD638A1E97136F00365184 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CD63891E97136F00365184 /* Person.swift */; };
 		BDD0D5DD1E96FC300078A546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D5DC1E96FC300078A546 /* AppDelegate.swift */; };
 		BDD0D5DF1E96FC300078A546 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */; };
 		BDD0D5E11E96FC300078A546 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D5E01E96FC300078A546 /* SecondViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37CD63851E9706B300365184 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		37CD63871E970D4100365184 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
+		37CD63891E97136F00365184 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BDD0D5D91E96FC300078A546 /* UMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD0D5DC1E96FC300078A546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +62,13 @@
 		BDD0D5DB1E96FC300078A546 /* UMates */ = {
 			isa = PBXGroup;
 			children = (
+				37CD63871E970D4100365184 /* img */,
 				BDD0D5DC1E96FC300078A546 /* AppDelegate.swift */,
 				BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */,
+				37CD63891E97136F00365184 /* Person.swift */,
 				BDD0D5E01E96FC300078A546 /* SecondViewController.swift */,
 				BDD0D5E21E96FC300078A546 /* Main.storyboard */,
+				37CD63851E9706B300365184 /* ProfileTableViewCell.swift */,
 				BDD0D5E51E96FC310078A546 /* Assets.xcassets */,
 				BDD0D5E71E96FC310078A546 /* LaunchScreen.storyboard */,
 				BDD0D5EA1E96FC310078A546 /* Info.plist */,
@@ -99,7 +108,7 @@
 				TargetAttributes = {
 					BDD0D5D81E96FC300078A546 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = T96J4Z7274;
+						DevelopmentTeam = 56QN9BM5HK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CD63881E970D4100365184 /* img in Resources */,
 				BDD0D5E91E96FC310078A546 /* LaunchScreen.storyboard in Resources */,
 				BDD0D5E61E96FC310078A546 /* Assets.xcassets in Resources */,
 				BDD0D5E41E96FC300078A546 /* Main.storyboard in Resources */,
@@ -140,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CD638A1E97136F00365184 /* Person.swift in Sources */,
 				BDD0D5E11E96FC300078A546 /* SecondViewController.swift in Sources */,
+				37CD63861E9706B300365184 /* ProfileTableViewCell.swift in Sources */,
 				BDD0D5DD1E96FC300078A546 /* AppDelegate.swift in Sources */,
 				BDD0D5DF1E96FC300078A546 /* FirstViewController.swift in Sources */,
 			);
@@ -265,8 +277,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T96J4Z7274;
+				DEVELOPMENT_TEAM = 56QN9BM5HK;
 				INFOPLIST_FILE = UMates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TheNerdHerd.UMates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,8 +291,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T96J4Z7274;
+				DEVELOPMENT_TEAM = 56QN9BM5HK;
 				INFOPLIST_FILE = UMates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TheNerdHerd.UMates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +320,7 @@
 				BDD0D5EF1E96FC310078A546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
