@@ -22,6 +22,9 @@ class ProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
         budgetImg.image = UIImage(named:"img/budgetImage.png")
         moveInDateImg.image = UIImage(named:"img/moveInDateImage.png");
+        self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width / 2;
+        self.profileImg.clipsToBounds = true;
+        self.profileImg.contentMode = .scaleAspectFill
     }
     
     func setProfileImage(image: UIImage){

@@ -12,25 +12,39 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var people =  [
         Person(
-            name: "Austin",
+            name: "George",
             major: "B.S. Computer Science",
             budget: "$700-$1000",
             moveInDate: "Aug 1",
-            profileImg: UIImage(named: "img/austin.jpg")!
+            profileImg: UIImage(named: "img/george.jpg")!
         ),
         Person(
-            name: "Alexa",
-            major: "Premed",
-            budget: "$700-$1000",
-            moveInDate: "Aug 1",
-            profileImg: UIImage(named: "img/austin.jpg")!
+            name: "Paul",
+            major: "B.F.A. Design",
+            budget: "$8000-$1000000",
+            moveInDate: "Aug 28",
+            profileImg: UIImage(named: "img/paul.jpg")!
         ),
         Person(
             name: "John",
-            major: "B.S. Physics",
-            budget: "$0-$1000",
-            moveInDate: "Aug 11",
-            profileImg: UIImage(named: "img/austin.jpg")!
+            major: "B.S. Music",
+            budget: "$2000-$30000",
+            moveInDate: "Aug 30",
+            profileImg: UIImage(named: "img/john.jpg")!
+        ),
+        Person(
+            name: "Ringo",
+            major: "B.S. Mechanical Engineering",
+            budget: "$600-$1000",
+            moveInDate: "Aug 20",
+            profileImg: UIImage(named: "img/ringo.jpg")!
+        ),
+        Person(
+            name: "Harry",
+            major: "Premed",
+            budget: "$1000-$5000",
+            moveInDate: "Aug 29",
+            profileImg: UIImage(named: "img/harry.jpg")!
         )
     ]
     
