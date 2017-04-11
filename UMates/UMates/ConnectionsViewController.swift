@@ -1,24 +1,25 @@
 //
-//  FirstViewController.swift
+//  ConnectionsViewController.swift
 //  UMates
 //
-//  Created by Taylor Ray Herald on 4/6/17.
+//  Created by Glizela Taino on 4/10/17.
 //  Copyright © 2017 TheNerdHerd. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConnectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     @IBOutlet weak var table: UITableView!
     var people: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        people = FakeData.getFeedViewData()
+        people = FakeData.getConnectionsViewData()
         table.delegate = self
         table.dataSource = self
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
@@ -37,12 +38,21 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.setProfileImage(image: aPerson.getProfileImage())
         return cell
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
