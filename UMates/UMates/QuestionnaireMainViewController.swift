@@ -38,6 +38,17 @@ class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UI
         cell.instructionDescript.text = questionnaireData[indexPath.row][1]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "toAboutMe", sender: nil)
+        case 1:
+            performSegue(withIdentifier: "toRoommate", sender: nil)
+        default:
+            performSegue(withIdentifier: "", sender: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

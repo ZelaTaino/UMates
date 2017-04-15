@@ -8,19 +8,22 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var person = Person(name: "Austin Prince", major: "B.S. Computer Science", budget: "$700-$1000", moveInDate: "Aug 1", profileImg: UIImage(named: "img/austin.jpg")!, visitor: "No visitors", cook: 3, party: "Occasional Partier", clean: "Neat Freak", pet: "No", drinking: "Occasional Drinker", smoking: "No", gender: "male", genderPref: "same", gradYear: 2018, aboutMe: "I'm a dual degree transfer student new to WashU. I like to do things in my free time and my favorite TV show is Arrested Development!", interests:["Hanging", "Chilling", "Doing my thing", "Do it to it"])
 
-  
+    var sizingCell: TagCell?
     @IBOutlet weak var profilePic: UIImageView!
     
     @IBOutlet weak var nameTag: UILabel!
     @IBOutlet weak var moveInDayPic: UIImageView!
     @IBOutlet weak var aboutText: UILabel!
     @IBOutlet weak var majorLabel: UILabel!
+   
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var interestView: UICollectionView!
+    
+    @IBOutlet weak var flowLayout: FlowLayout!
     @IBOutlet weak var aboutHeader: UILabel!
     @IBOutlet weak var visitorLabel: UILabel!
     @IBOutlet weak var visitorPic: UIImageView!
@@ -44,6 +47,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         moveInDayPic.image = UIImage(named: "img/moveInDateImage.png")
         visitorPic.image = UIImage(named: "img/visitor.png")
         cookPic.image = UIImage(named: "img/cook.png")
@@ -69,15 +73,48 @@ class SecondViewController: UIViewController {
         aboutHeader.text = "About " + person.getName()
         majorLabel.text = person.getMajor() + "\n" + "Class of " + String(person.getGradYear())
         aboutText.text = person.getAbout()
-        for interest in person.getInterests() {
-            let interestLabel = CustomLabel()
-            interestLabel.text = interest
-            interestLabel.sizeToFit()
-            interestView.addSubview(interestLabel)
-        }
         
+        let cellNib = UINib(nibName: "TagCell", bundle: nil)
+        self.collectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
+        self.collectionView.backgroundColor = UIColor.clear
+        self.sizingCell = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! TagCell?
+        
+        self.flowLayout.sectionInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0)
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return person.getInterests().count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
+        self.configureCell(cell: cell, forIndexPath: indexPath as NSIndexPath)
+        return cell
+        
+
+    }
+    
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        self.configureCell(self.sizingCell!, forIndexPath: indexPath)
+//        return self.sizingCell!.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        self.configureCell(cell: self.sizingCell!, forIndexPath: indexPath as NSIndexPath)
+        return self.sizingCell!.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+    }
+    
+    
+    func configureCell(cell: TagCell, forIndexPath indexPath: NSIndexPath) {
+        var TAGS = person.getInterests()
+        let tag = TAGS[indexPath.row]
+        cell.tagName.text = tag
+    }
+   
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

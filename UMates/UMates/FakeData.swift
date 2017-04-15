@@ -9,6 +9,7 @@
 import UIKit
 
 struct FakeData{
+    
     static func getFeedViewData() -> [Person]{
         let people =  [
             Person(
@@ -95,4 +96,6 @@ struct FakeData{
         let q = [["Set about me", "Summarize who you are as a human"], ["Set roommate preferences", "Let others know who you are as a roommate"], ["Move in details", "Let others know your roommate details"]]
         return q
     }
+    
+    
 }
