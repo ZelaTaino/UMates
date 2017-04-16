@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		370ED0DB1E9E9287009C16E4 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370ED0DA1E9E9287009C16E4 /* SearchTableViewCell.swift */; };
 		3747BA701E9C98B800A22F52 /* MajorSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747BA6F1E9C98B800A22F52 /* MajorSearchViewController.swift */; };
+		374E0A9D1EA331810062364F /* RoommatePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */; };
+		374E0A9F1EA332260062364F /* RoommatePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */; };
+		374E0AA11EA332A50062364F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0AA01EA332A50062364F /* Preference.swift */; };
 		378A23511E9E97C000FC88CF /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234D1E9E97C000FC88CF /* FlowLayout.swift */; };
 		378A23521E9E97C000FC88CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234E1E9E97C000FC88CF /* LoginView.swift */; };
 		378A23531E9E97C000FC88CF /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234F1E9E97C000FC88CF /* TagCell.swift */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		370ED0DA1E9E9287009C16E4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		3747BA6F1E9C98B800A22F52 /* MajorSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorSearchViewController.swift; sourceTree = "<group>"; };
+		374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatePreferencesTableViewCell.swift; sourceTree = "<group>"; };
+		374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatePreferencesViewController.swift; sourceTree = "<group>"; };
+		374E0AA01EA332A50062364F /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		378A234D1E9E97C000FC88CF /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		378A234E1E9E97C000FC88CF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		378A234F1E9E97C000FC88CF /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				37D67AD61E9D53C900F1A6F8 /* Person.swift */,
 				BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */,
 				BDD0D5E21E96FC300078A546 /* Main.storyboard */,
+				374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */,
+				374E0AA01EA332A50062364F /* Preference.swift */,
+				374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */,
 				378A235B1EA0028E00FC88CF /* AboutMeViewController.swift */,
 				378A23571E9E9E2E00FC88CF /* InterestsViewController.swift */,
 				3747BA6F1E9C98B800A22F52 /* MajorSearchViewController.swift */,
@@ -190,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374E0A9F1EA332260062364F /* RoommatePreferencesViewController.swift in Sources */,
 				37D67AD71E9D53C900F1A6F8 /* Person.swift in Sources */,
 				37CD62541E9B461B007A1D54 /* FakeData.swift in Sources */,
 				378A23531E9E97C000FC88CF /* TagCell.swift in Sources */,
@@ -198,6 +208,8 @@
 				37CD62581E9BF48B007A1D54 /* QuestionnaireMainViewController.swift in Sources */,
 				3747BA701E9C98B800A22F52 /* MajorSearchViewController.swift in Sources */,
 				37CD63861E9706B300365184 /* ProfileTableViewCell.swift in Sources */,
+				374E0A9D1EA331810062364F /* RoommatePreferencesTableViewCell.swift in Sources */,
+				374E0AA11EA332A50062364F /* Preference.swift in Sources */,
 				378A235C1EA0028E00FC88CF /* AboutMeViewController.swift in Sources */,
 				378A23581E9E9E2E00FC88CF /* InterestsViewController.swift in Sources */,
 				37CD62561E9B4A1A007A1D54 /* ConnectionsViewController.swift in Sources */,
