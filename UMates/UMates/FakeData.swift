@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
 
 struct FakeData{
     
@@ -17,6 +19,7 @@ struct FakeData{
     }
     
     static func getFeedViewData() -> [Person]{
+        
         let people =  [
             Person(
                 name: "George",

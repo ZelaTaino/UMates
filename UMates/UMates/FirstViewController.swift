@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,6 +16,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var people: [Person] = []
     
     override func viewDidLoad() {
+        //db
+        let db = FIRDatabase.database().reference()
+        db.child("Users").observe(.value, with: {
+            snapshot in
+            
+            let someData = snapshot.value! as! Dictionary<String, Any>
+            for(key, value) in someData {
+                print("\(key) : \(value)")
+            }
+            
+//            let budget = snapshot.childSnapshot(forPath: "Budget").value as! Int
+//            let firstName = snapshot.childSnapshot(forPath: "FirstName").value as! String
+//            let moveInDate = snapshot.childSnapshot(forPath: "MoveInDate").value as! String
+            
+//            print(String(budget))
+//            print(firstName)
+//            print(moveInDate)
+        })
+        
         super.viewDidLoad()
         people = FakeData.getFeedViewData()
         table.delegate = self

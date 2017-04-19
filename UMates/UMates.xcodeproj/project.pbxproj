@@ -19,6 +19,7 @@
 		378A23561E9E993300FC88CF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A23551E9E993200FC88CF /* SecondViewController.swift */; };
 		378A23581E9E9E2E00FC88CF /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A23571E9E9E2E00FC88CF /* InterestsViewController.swift */; };
 		378A235C1EA0028E00FC88CF /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A235B1EA0028E00FC88CF /* AboutMeViewController.swift */; };
+		37C2586A1EA7D48B003C03DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37C258691EA7D48B003C03DE /* GoogleService-Info.plist */; };
 		37CD62541E9B461B007A1D54 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CD62531E9B461B007A1D54 /* FakeData.swift */; };
 		37CD62561E9B4A1A007A1D54 /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CD62551E9B4A1A007A1D54 /* ConnectionsViewController.swift */; };
 		37CD62581E9BF48B007A1D54 /* QuestionnaireMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CD62571E9BF48B007A1D54 /* QuestionnaireMainViewController.swift */; };
@@ -27,6 +28,7 @@
 		37CD63881E970D4100365184 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 37CD63871E970D4100365184 /* img */; };
 		37D67AD71E9D53C900F1A6F8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D67AD61E9D53C900F1A6F8 /* Person.swift */; };
 		37D67AD91E9D540800F1A6F8 /* InterestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D67AD81E9D540800F1A6F8 /* InterestLabel.swift */; };
+		3891B078CFFC1CDDC7562AA3 /* Pods_UMates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B28C90924673F6D9FD1E2B5 /* Pods_UMates.framework */; };
 		BDD0D5DD1E96FC300078A546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D5DC1E96FC300078A546 /* AppDelegate.swift */; };
 		BDD0D5DF1E96FC300078A546 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */; };
 		BDD0D5E41E96FC300078A546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD0D5E21E96FC300078A546 /* Main.storyboard */; };
@@ -35,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B28C90924673F6D9FD1E2B5 /* Pods_UMates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370ED0DA1E9E9287009C16E4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		3747BA6F1E9C98B800A22F52 /* MajorSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorSearchViewController.swift; sourceTree = "<group>"; };
 		374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatePreferencesTableViewCell.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		378A23551E9E993200FC88CF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		378A23571E9E9E2E00FC88CF /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		378A235B1EA0028E00FC88CF /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		37C258691EA7D48B003C03DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37CD62531E9B461B007A1D54 /* FakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		37CD62551E9B4A1A007A1D54 /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
 		37CD62571E9BF48B007A1D54 /* QuestionnaireMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireMainViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		BDD0D5E51E96FC310078A546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD0D5E81E96FC310078A546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD0D5EA1E96FC310078A546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35C7458C07E60B7CA5A4894 /* Pods-UMates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UMates/Pods-UMates.debug.xcconfig"; sourceTree = "<group>"; };
+		EEBEEF600AA89F34307E69D7 /* Pods-UMates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMates.release.xcconfig"; path = "Pods/Target Support Files/Pods-UMates/Pods-UMates.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +75,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3891B078CFFC1CDDC7562AA3 /* Pods_UMates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9F08E5027C4085F31178963 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D35C7458C07E60B7CA5A4894 /* Pods-UMates.debug.xcconfig */,
+				EEBEEF600AA89F34307E69D7 /* Pods-UMates.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BDD0D5D01E96FC300078A546 = {
 			isa = PBXGroup;
 			children = (
 				BDD0D5DB1E96FC300078A546 /* UMates */,
 				BDD0D5DA1E96FC300078A546 /* Products */,
+				A9F08E5027C4085F31178963 /* Pods */,
+				DEC8BA6051B199565BE83FDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,11 +135,20 @@
 				37CD63851E9706B300365184 /* ProfileTableViewCell.swift */,
 				BDD0D5E51E96FC310078A546 /* Assets.xcassets */,
 				BDD0D5E71E96FC310078A546 /* LaunchScreen.storyboard */,
+				37C258691EA7D48B003C03DE /* GoogleService-Info.plist */,
 				BDD0D5EA1E96FC310078A546 /* Info.plist */,
 				37CD62531E9B461B007A1D54 /* FakeData.swift */,
 				37CD62551E9B4A1A007A1D54 /* ConnectionsViewController.swift */,
 			);
 			path = UMates;
+			sourceTree = "<group>";
+		};
+		DEC8BA6051B199565BE83FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B28C90924673F6D9FD1E2B5 /* Pods_UMates.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDD0D5ED1E96FC310078A546 /* Build configuration list for PBXNativeTarget "UMates" */;
 			buildPhases = (
+				F41AC9CE03EF132B1D8D69A3 /* [CP] Check Pods Manifest.lock */,
 				BDD0D5D51E96FC300078A546 /* Sources */,
 				BDD0D5D61E96FC300078A546 /* Frameworks */,
 				BDD0D5D71E96FC300078A546 /* Resources */,
+				CE4618F4C94504114C2E064D /* [CP] Embed Pods Frameworks */,
+				190F1A824927282CD0C31B84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,10 +219,59 @@
 				BDD0D5E91E96FC310078A546 /* LaunchScreen.storyboard in Resources */,
 				BDD0D5E61E96FC310078A546 /* Assets.xcassets in Resources */,
 				BDD0D5E41E96FC300078A546 /* Main.storyboard in Resources */,
+				37C2586A1EA7D48B003C03DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		190F1A824927282CD0C31B84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UMates/Pods-UMates-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4618F4C94504114C2E064D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UMates/Pods-UMates-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F41AC9CE03EF132B1D8D69A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDD0D5D51E96FC300078A546 /* Sources */ = {
@@ -339,6 +418,7 @@
 		};
 		BDD0D5EE1E96FC310078A546 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35C7458C07E60B7CA5A4894 /* Pods-UMates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56QN9BM5HK;
@@ -353,6 +433,7 @@
 		};
 		BDD0D5EF1E96FC310078A546 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBEEF600AA89F34307E69D7 /* Pods-UMates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56QN9BM5HK;
