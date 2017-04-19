@@ -8,49 +8,42 @@
 
 import UIKit
 
-class RoommatePreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RoommatePreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let data = [
-        Preference(
-            iconImage: UIImage(named: "img/smoking.png")!,
-            title: "Smoke",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/drink.png")!,
-            title: "Drink",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/gender.png")!,
-            title: "Gender Preference",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/pet.png")!,
-            title: "Pets",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/clean.png")!,
-            title: "Cleaniness",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/party.png")!,
-            title: "House Parties",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/cook.png")!,
-            title: "Cooking Frequency",
-            option: .set),
-        Preference(
-            iconImage: UIImage(named: "img/visitor.png")!,
-            title: "Visitors",
-            option: .set)
-    ]
+    var data = [Preference]()
+    var pickerOptions = [String]()
+    let toolBar = UIToolbar()
+    @IBOutlet weak var picker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        data = FakeData.getPreferencesSetup()
+        
+        picker.delegate = self
+        picker.dataSource = self
+        
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(pickerSave))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(pickerSave))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+//        textField1.inputView = picker
+//        textField1.inputAccessoryView = toolBar
+    }
+    
+    func pickerSave() {
+        print()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,14 +59,36 @@ class RoommatePreferencesViewController: UIViewController, UITableViewDelegate, 
         let preference = data[indexPath.row]
         cell.iconImg.image = preference.getIconImage()
         cell.preference.text = preference.getTitle()
-        cell.options.text = preference.getOption()
+        cell.options.text = preference.getChoosenOption()
         return cell
     }
-
-    override func didReceveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let preference = data[indexPath.row]
+        pickerOptions.removeAll(keepingCapacity: false)
+        pickerOptions = preference.getOptions()
+        print(pickerOptions)
+        picker.reloadAllComponents()
+        
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerOptions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerOptions[row]
+    }
+    
+
+//    override func didReceveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
 
     /*

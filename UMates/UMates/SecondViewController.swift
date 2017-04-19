@@ -9,8 +9,8 @@
 import UIKit
 
 class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    var person = Person(name: "Austin Prince", major: "B.S. Computer Science", budget: "$700-$1000", moveInDate: "Aug 1", profileImg: UIImage(named: "img/austin.jpg")!, visitor: "No visitors", cook: 3, party: "Occasional Partier", clean: "Neat Freak", pet: "No", drinking: "Occasional Drinker", smoking: "No", gender: "male", genderPref: "same", gradYear: 2018, aboutMe: "I'm a dual degree transfer student new to WashU. I like to do things in my free time and my favorite TV show is Arrested Development!", interests:["Hanging", "Chilling", "Doing my thing", "Do it to it"])
+    var person:Person = Person()
+//    var person = Person(name: "Austin Prince", major: "B.S. Computer Science", budget: "$700-$1000", moveInDate: "Aug 1", profileImg: UIImage(named: "img/austin.jpg")!, visitor: "No visitors", cook: 3, party: "Occasional Partier", clean: "Neat Freak", pet: "No", drinking: "Occasional Drinker", smoking: "No", gender: "male", genderPref: "same", gradYear: 2018, aboutMe: "I'm a dual degree transfer student new to WashU. I like to do things in my free time and my favorite TV show is Arrested Development!", interests:["Hanging", "Chilling", "Doing my thing", "Do it to it"])
 
     var sizingCell: TagCell?
     @IBOutlet weak var profilePic: UIImageView!
@@ -47,17 +47,9 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        moveInDayPic.image = UIImage(named: "img/moveInDateImage.png")
-        visitorPic.image = UIImage(named: "img/visitor.png")
-        cookPic.image = UIImage(named: "img/cook.png")
-        partyPic.image = UIImage(named: "img/party.png")
-        cleanPic.image = UIImage(named: "img/clean.png")
-        petPic.image = UIImage(named: "img/pet.png")
-        drinkerPic.image = UIImage(named: "img/drink.png")
-        smokerPic.image = UIImage(named: "img/Smoking-50.png")
-        genderPic.image = UIImage(named: "img/gender.png")
-        pricePic.image = UIImage(named: "img/budgetImage.png")
+        profilePic.contentMode = .scaleAspectFill
+        profilePic.clipsToBounds = true
+        loadStaticImages()
         nameTag.text = person.getName()
         profilePic.image = person.getProfileImage()
         visitorLabel.text = person.getVisitor()
@@ -82,6 +74,21 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.flowLayout.sectionInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0)
         
     }
+    
+    func loadStaticImages() {
+        moveInDayPic.image = UIImage(named: "img/moveInDateImage.png")
+        visitorPic.image = UIImage(named: "img/visitor.png")
+        cookPic.image = UIImage(named: "img/cook.png")
+        partyPic.image = UIImage(named: "img/party.png")
+        cleanPic.image = UIImage(named: "img/clean.png")
+        petPic.image = UIImage(named: "img/pet.png")
+        drinkerPic.image = UIImage(named: "img/drink.png")
+        smokerPic.image = UIImage(named: "img/Smoking-50.png")
+        genderPic.image = UIImage(named: "img/gender.png")
+        pricePic.image = UIImage(named: "img/budgetImage.png")
+        
+    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return person.getInterests().count

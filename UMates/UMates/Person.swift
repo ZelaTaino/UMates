@@ -13,7 +13,7 @@ class Person{
     private var major: String?
     private var budget: String?
     private var moveInDate: String?
-    private var profileImg: UIImage
+    private var profileImg: UIImage?
     private var visitor:String?
     private var cook:Int?
     private var party:String?
@@ -28,7 +28,7 @@ class Person{
     private var interests:[String]?
 
     
- 
+    init() {}
     
     init(name: String, major: String, budget: String, moveInDate: String, profileImg: UIImage) {
         self.name = name
@@ -75,7 +75,7 @@ class Person{
     }
     
     func getProfileImage() -> UIImage{
-        return profileImg
+        return profileImg!
     }
     func getVisitor() -> String {
         return visitor!

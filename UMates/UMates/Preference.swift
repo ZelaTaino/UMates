@@ -11,29 +11,14 @@ import UIKit
 class Preference {
     private var iconImg: UIImage
     private var title: String
-    private var option: Option
+    private var choosenOption: String
+    private var options = [String]()
     
-    enum Option {
-        case set
-        case yes
-        case no
-        case male
-        case female
-        case noPreference
-        case occasionally
-        case allergic
-        case neatFreak
-        case cleanSharedSpace
-        case messy
-        case never
-        case everyday
-        case often
-    }
-    
-    init(iconImage: UIImage, title: String, option: Option) {
+    init(iconImage: UIImage, title: String, choosenOption: String, options: [String]) {
         iconImg = iconImage
         self.title = title
-        self.option = option
+        self.choosenOption = choosenOption
+        self.options = options
     }
     
     func getIconImage() -> UIImage {
@@ -44,7 +29,15 @@ class Preference {
         return self.title
     }
     
-    func getOption() -> Option {
-        return self.option
+    func getOptions() -> [String] {
+        return options
+    }
+    
+    func getChoosenOption() -> String {
+        return choosenOption
+    }
+    
+    func changeChoosenOption(newOption: String){
+        self.choosenOption = newOption
     }
 }

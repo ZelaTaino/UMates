@@ -43,6 +43,21 @@ class ConnectionsViewController: UIViewController, UITableViewDelegate, UITableV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "connectShow" {
+            print("in here")
+            let destinationViewController = segue.destination as! SecondViewController
+            if let cell = sender as? UITableViewCell, let indexPath = table.indexPath(for: cell) {
+                
+                
+                //                print ("cell selected")
+                var person = people[indexPath.row]
+                //                print ("\(people[indexPath.row])")
+                destinationViewController.person = person
+            }
+            
+        }
+    }
     
 
     /*
