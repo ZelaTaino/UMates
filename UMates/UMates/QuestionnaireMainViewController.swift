@@ -45,6 +45,8 @@ class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UI
             performSegue(withIdentifier: "toAboutMe", sender: nil)
         case 1:
             performSegue(withIdentifier: "toPreferenceSetup", sender: nil)
+        case 2:
+            performSegue(withIdentifier: "toMoveInDetails", sender: nil)
         default:
             performSegue(withIdentifier: "", sender: nil)
         }

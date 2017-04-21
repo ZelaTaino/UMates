@@ -12,6 +12,8 @@
 		374E0A9D1EA331810062364F /* RoommatePreferencesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */; };
 		374E0A9F1EA332260062364F /* RoommatePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */; };
 		374E0AA11EA332A50062364F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E0AA01EA332A50062364F /* Preference.swift */; };
+		37726A5C1EA985DA00E6B425 /* MoveInDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37726A5B1EA985DA00E6B425 /* MoveInDetailsViewController.swift */; };
+		37726A5E1EA98BB700E6B425 /* BioOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37726A5D1EA98BB700E6B425 /* BioOptionsViewController.swift */; };
 		378A23511E9E97C000FC88CF /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234D1E9E97C000FC88CF /* FlowLayout.swift */; };
 		378A23521E9E97C000FC88CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234E1E9E97C000FC88CF /* LoginView.swift */; };
 		378A23531E9E97C000FC88CF /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A234F1E9E97C000FC88CF /* TagCell.swift */; };
@@ -43,6 +45,8 @@
 		374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatePreferencesTableViewCell.swift; sourceTree = "<group>"; };
 		374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoommatePreferencesViewController.swift; sourceTree = "<group>"; };
 		374E0AA01EA332A50062364F /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		37726A5B1EA985DA00E6B425 /* MoveInDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveInDetailsViewController.swift; sourceTree = "<group>"; };
+		37726A5D1EA98BB700E6B425 /* BioOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BioOptionsViewController.swift; path = ../BioOptionsViewController.swift; sourceTree = "<group>"; };
 		378A234D1E9E97C000FC88CF /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		378A234E1E9E97C000FC88CF /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		378A234F1E9E97C000FC88CF /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		BDD0D5DB1E96FC300078A546 /* UMates */ = {
 			isa = PBXGroup;
 			children = (
+				37726A5D1EA98BB700E6B425 /* BioOptionsViewController.swift */,
 				37CD63871E970D4100365184 /* img */,
 				BDD0D5DC1E96FC300078A546 /* AppDelegate.swift */,
 				37D67AD81E9D540800F1A6F8 /* InterestLabel.swift */,
@@ -122,6 +127,7 @@
 				37D67AD61E9D53C900F1A6F8 /* Person.swift */,
 				BDD0D5DE1E96FC300078A546 /* FirstViewController.swift */,
 				BDD0D5E21E96FC300078A546 /* Main.storyboard */,
+				37726A5B1EA985DA00E6B425 /* MoveInDetailsViewController.swift */,
 				374E0A9E1EA332260062364F /* RoommatePreferencesViewController.swift */,
 				374E0AA01EA332A50062364F /* Preference.swift */,
 				374E0A9C1EA331810062364F /* RoommatePreferencesTableViewCell.swift */,
@@ -288,6 +294,7 @@
 				3747BA701E9C98B800A22F52 /* MajorSearchViewController.swift in Sources */,
 				37CD63861E9706B300365184 /* ProfileTableViewCell.swift in Sources */,
 				374E0A9D1EA331810062364F /* RoommatePreferencesTableViewCell.swift in Sources */,
+				37726A5E1EA98BB700E6B425 /* BioOptionsViewController.swift in Sources */,
 				374E0AA11EA332A50062364F /* Preference.swift in Sources */,
 				378A235C1EA0028E00FC88CF /* AboutMeViewController.swift in Sources */,
 				378A23581E9E9E2E00FC88CF /* InterestsViewController.swift in Sources */,
@@ -298,6 +305,7 @@
 				37CD625A1E9BF7B7007A1D54 /* QuestionnaireMainTableViewCell.swift in Sources */,
 				370ED0DB1E9E9287009C16E4 /* SearchTableViewCell.swift in Sources */,
 				BDD0D5DF1E96FC300078A546 /* FirstViewController.swift in Sources */,
+				37726A5C1EA985DA00E6B425 /* MoveInDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

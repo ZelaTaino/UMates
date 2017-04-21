@@ -146,43 +146,43 @@ struct FakeData{
             Preference(
                 iconImage: UIImage(named: "img/Smoking-50.png")!,
                 title: "Smoke",
-                choosenOption: "Set",
+                choosenOption: "No",
                 options: ["No", "Yes", "No Preference"]),
             Preference(
                 iconImage: UIImage(named: "img/drink.png")!,
                 title: "Drink",
-                choosenOption: "Set",
+                choosenOption: "No",
                 options: ["No", "Occassionally", "Yes"]),
             Preference(
                 iconImage: UIImage(named: "img/gender.png")!,
                 title: "Gender Preference",
-                choosenOption: "Set",
-                options: ["Male", "Female", "No Preference"]),
+                choosenOption: "No Preference",
+                options: ["No Preference", "Male", "Female"]),
             Preference(
                 iconImage: UIImage(named: "img/pet.png")!,
                 title: "Pets",
-                choosenOption: "Set",
-                options: ["No", "Yes", "No preference"]),
+                choosenOption: "No Preference",
+                options: ["No preference", "No", "Yes"]),
             Preference(
                 iconImage: UIImage(named: "img/clean.png")!,
                 title: "Cleaniness",
-                choosenOption: "Set",
-                options: ["Neat Freak", "Clean Shared Space", "Messy"]),
+                choosenOption: "Clean Shared Space",
+                options: ["Clean Shared Space", "Neat Freak", "Messy"]),
             Preference(
                 iconImage: UIImage(named: "img/party.png")!,
                 title: "House Parties",
-                choosenOption: "Set",
-                options: ["No", "Occassionally", "Yes"]),
+                choosenOption: "Occassionally",
+                options: ["Occassionally", "No", "Yes"]),
             Preference(
                 iconImage: UIImage(named: "img/cook.png")!,
                 title: "Cooking Frequency",
-                choosenOption: "Set",
-                options: ["Never", "Occasionally", "Everyday"]),
+                choosenOption: "Occasionally",
+                options: ["Occasionally", "Never", "Everyday"]),
             Preference(
                 iconImage: UIImage(named: "img/visitor.png")!,
                 title: "Visitors",
-                choosenOption: "Set",
-                options: ["Never", "Occasionally", "Everyday"])
+                choosenOption: "Occasionally",
+                options: ["Occasionally", "Never", "Everyday"])
         ]
         
         return data

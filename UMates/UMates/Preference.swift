@@ -9,10 +9,10 @@
 import UIKit
 
 class Preference {
-    private var iconImg: UIImage
-    private var title: String
-    private var choosenOption: String
-    private var options = [String]()
+    private var iconImg: UIImage?
+    private var title: String?
+    private var choosenOption: String?
+    private var options: [String]?
     
     init(iconImage: UIImage, title: String, choosenOption: String, options: [String]) {
         iconImg = iconImage
@@ -21,20 +21,28 @@ class Preference {
         self.options = options
     }
     
+    init(title:String){
+        self.title = nil
+    }
+    
+    convenience init(){
+        self.init(title: "")
+    }
+    
     func getIconImage() -> UIImage {
-        return iconImg
+        return iconImg!
     }
     
     func getTitle() -> String {
-        return self.title
+        return self.title!
     }
     
     func getOptions() -> [String] {
-        return options
+        return options!
     }
     
     func getChoosenOption() -> String {
-        return choosenOption
+        return choosenOption!
     }
     
     func changeChoosenOption(newOption: String){
