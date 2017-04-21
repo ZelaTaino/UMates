@@ -8,12 +8,13 @@
 
 import UIKit
 
-class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var setProfileImageView: UIImageView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var cameraBtn: UIButton!
     var questionnaireData = [[String]]()
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UI
         setProfileImageView.image = UIImage(named: "img/blurredImg.png")
         cameraBtn.setImage(UIImage(named: "img/cameraBtn.png"), for: .normal)
         questionnaireData = FakeData.getQuestionnaireMainData()
+        imagePicker.delegate = self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,7 +53,45 @@ class QuestionnaireMainViewController: UIViewController, UITableViewDelegate, UI
             performSegue(withIdentifier: "", sender: nil)
         }
     }
+    
+    @IBAction func cameraPressed(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {_ in self.openCamera()}))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {_ in self.openPhotoLibrary()}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func openCamera(){
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Warning", message: "You don't have a camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func openPhotoLibrary(){
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        setProfileImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    @IBAction func donePressed(_ sender: UIButton) {
+        let _ = setProfileImageView.image
+        print("Pass to db")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
