@@ -38,6 +38,30 @@
 		BDD0D5E91E96FC310078A546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD0D5E71E96FC310078A546 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D9DA1C0D1EAA976E00296DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A18F1521B16B4E2AF27335AF7DFF318;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		D9DA1C0F1EAA976E00296DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E4CB8238ACEFADEC5EF9C9D50F38530;
+			remoteInfo = GTMSessionFetcher;
+		};
+		D9DA1C111EAA976E00296DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46E580E65FC5C76FCA66E5220BE5CC29;
+			remoteInfo = "Pods-UMates";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1B28C90924673F6D9FD1E2B5 /* Pods_UMates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UMates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370ED0DA1E9E9287009C16E4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +95,7 @@
 		BDD0D5E81E96FC310078A546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD0D5EA1E96FC310078A546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35C7458C07E60B7CA5A4894 /* Pods-UMates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UMates/Pods-UMates.debug.xcconfig"; sourceTree = "<group>"; };
+		D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		EEBEEF600AA89F34307E69D7 /* Pods-UMates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UMates.release.xcconfig"; path = "Pods/Target Support Files/Pods-UMates/Pods-UMates.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,9 +174,20 @@
 			path = UMates;
 			sourceTree = "<group>";
 		};
+		D9DA1C081EAA976E00296DFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9DA1C0E1EAA976E00296DFA /* GoogleToolboxForMac.framework */,
+				D9DA1C101EAA976E00296DFA /* GTMSessionFetcher.framework */,
+				D9DA1C121EAA976E00296DFA /* Pods_UMates.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DEC8BA6051B199565BE83FDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */,
 				1B28C90924673F6D9FD1E2B5 /* Pods_UMates.framework */,
 			);
 			name = Frameworks;
@@ -192,7 +228,7 @@
 				TargetAttributes = {
 					BDD0D5D81E96FC300078A546 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 56QN9BM5HK;
+						DevelopmentTeam = 6HB6E9SALG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -208,12 +244,42 @@
 			mainGroup = BDD0D5D01E96FC300078A546;
 			productRefGroup = BDD0D5DA1E96FC300078A546 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D9DA1C081EAA976E00296DFA /* Products */;
+					ProjectRef = D9DA1C071EAA976E00296DFA /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BDD0D5D81E96FC300078A546 /* UMates */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D9DA1C0E1EAA976E00296DFA /* GoogleToolboxForMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleToolboxForMac.framework;
+			remoteRef = D9DA1C0D1EAA976E00296DFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9DA1C101EAA976E00296DFA /* GTMSessionFetcher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcher.framework;
+			remoteRef = D9DA1C0F1EAA976E00296DFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9DA1C121EAA976E00296DFA /* Pods_UMates.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_UMates.framework;
+			remoteRef = D9DA1C111EAA976E00296DFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BDD0D5D71E96FC300078A546 /* Resources */ = {
@@ -429,7 +495,7 @@
 			baseConfigurationReference = D35C7458C07E60B7CA5A4894 /* Pods-UMates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56QN9BM5HK;
+				DEVELOPMENT_TEAM = 6HB6E9SALG;
 				INFOPLIST_FILE = UMates/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,7 +510,7 @@
 			baseConfigurationReference = EEBEEF600AA89F34307E69D7 /* Pods-UMates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56QN9BM5HK;
+				DEVELOPMENT_TEAM = 6HB6E9SALG;
 				INFOPLIST_FILE = UMates/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
