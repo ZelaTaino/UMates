@@ -66,7 +66,7 @@ class RoommatePreferencesViewController: UIViewController, UITableViewDelegate, 
         let preference = data[indexPath.row]
         cell.iconImg.image = preference.getIconImage()
         cell.preference.text = preference.getTitle()
-        cell.options.text = preference.getOption()
+        cell.options.text = preference.getOption() 
         return cell
     }
 
